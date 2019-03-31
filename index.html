@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Home</title>
 		<meta name="description" content="description">
-		<meta name="author" content="DevOOPS">
+		<meta name="author" content="Arijt">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- Latest compiled and minified CSS -->
 		 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -24,11 +24,13 @@
   <header class="navbar">
 	<div class="container-fluid expanded-panel">
 		<div class="row">
-			<div id="logo" class="col-xs-12 col-sm-2">
-				<a href="index.html">Routine Management</a>
+			<div id="logo" class="col-md-4">
+				<a href="index.html">
+					<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Routine Management</a>
 			</div>
-			<div id="top-panel" class="col-xs-12 col-sm-10">
-				<div class="pull-right "><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Log in</button></div>
+			<div id="top-panel" class="col-md-8">
+				<div class="pull-right " style="padding-top: 5px"><button style="background-color: #26a65b" type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Log in</button></div>
 			</div>
 		</div>
 	</div>
@@ -39,7 +41,7 @@
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
 					<h1>Login to Your Account</h1><br>
-				  <form>
+				  <form action="admin_panel.html">
 					<input type="text" name="user" placeholder="Username">
 					<input type="password" name="pass" placeholder="Password">
 					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
@@ -170,6 +172,6 @@
 		<!--End Content-->
 	</div>
 </div>
-<script src="js/devoops.js"></script>
+<script src="js/routine.js"></script>
 </body>
 </html>
