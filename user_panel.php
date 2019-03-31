@@ -1,8 +1,13 @@
+<?php session_start();
+if(empty($_SESSION['user_id'])):
+header('Location:index.php');
+endif;?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Admin Panel</title>
+		<title>Welcome Username</title>
 		<meta name="description" content="description">
 		<meta name="author" content="Arijt">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +36,7 @@
 			</div>
 			<div id="top-panel" class="col-md-7">
 				<div class="pull-right" style="padding-top: 5px">
-					<h4 style="color: White">Welcome <strong style="color: #2ecc71">Admin</strong></h4>
+					<h4 style="color: White">Welcome <strong style="color: #2ecc71"><?php echo strtoupper($_SESSION['short_name'])?></strong></h4>
 				</div>
 			</div>
 			<div id="top-panel" class="col-md-1">
@@ -43,19 +48,6 @@
 	</div>
 </header>
 <!--End Header-->
-
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    	  <div class="modal-dialog">
-				<div class="loginmodal-container">
-					<h1>Login to Your Account</h1><br>
-				  <form>
-					<input type="text" name="user" placeholder="Username">
-					<input type="password" name="pass" placeholder="Password">
-					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-				  </form>
-				</div>
-			</div>
-		  </div>
 
 <!--Start Container-->
 <div id="main" class="container-fluid">
@@ -76,45 +68,17 @@
 				</li>
 				<li>
 					<a href="ajax/dashboard.html" class="ajax-link">
-						<i class="fa fa-users"></i>
-						<span class="hidden-xs">Users Details</span>
+						<i class="fa fa-calendar-o"></i>
+						<span class="hidden-xs">Today's classes</span>
 					</a>
 				</li>
 				<li>
 					<a href="ajax/dashboard.html" class="ajax-link">
-						<i class="fa fa-check"></i>
-						<span class="hidden-xs">Select Semester</span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-book"></i>
-						<span class="hidden-xs">Subjects</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">IT</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">CSE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine3.html">ECE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine4.html">CE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine5.html">EE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine6.html">AIEEE</a></li>
-					</ul>
-				</li>
-
-								<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-calendar"></i>
-						<span class="hidden-xs">Edit Routines</span>
+						<span class="hidden-xs">This weeks classes</span>
 					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">IT</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">CSE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine3.html">ECE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine4.html">CE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine5.html">EE</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine6.html">AIEEE</a></li>
-					</ul>
 				</li>
+				
 			</ul>
 		</div>
 		<!--Start Content-->
