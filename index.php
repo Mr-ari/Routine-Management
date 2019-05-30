@@ -1,3 +1,20 @@
+<?php include 'backend/connection.php' ?>
+<?php 
+
+	$query = "SELECT * from active_semester where semester_name='odd'";
+	$fire = mysqli_query($con,$query);
+	$row = mysqli_fetch_array($fire);
+
+	$odd = $row['value'];
+
+	$query = "SELECT * from active_semester where semester_name='even'";
+	$fire = mysqli_query($con,$query);
+	$row = mysqli_fetch_array($fire);
+
+	$even = $row['value'];
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -67,14 +84,78 @@
 						<span class="hidden-xs">IT</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 
@@ -84,14 +165,78 @@
 						<span class="hidden-xs">CSE</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 
@@ -101,14 +246,78 @@
 						<span class="hidden-xs">ECE</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 
@@ -118,14 +327,78 @@
 						<span class="hidden-xs">EE</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 
@@ -135,14 +408,78 @@
 						<span class="hidden-xs">CE</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 
@@ -152,14 +489,78 @@
 						<span class="hidden-xs">AIEEE</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine3.html">3st Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine4.html">4th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine5.html">5th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine6.html">6th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine7.html">7th Semester</a></li>
-						<li><a class="ajax-link" href="ajax/it/show_routine8.html">8th Semester</a></li>
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+
+						 		<?php	
+						 	} 
+						?>
+
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine4.html">4th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine5.html">5th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine6.html">6th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($odd == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine7.html">7th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
+						<?php 
+
+						 	if($even == '1'){
+						 		?>
+						 		<li><a class="ajax-link" href="ajax/show_routine8.html">8th Semester</a></li>
+						 		<?php
+						 	} 
+						?>
+						
 					</ul>
 				</li>
 

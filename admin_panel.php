@@ -39,11 +39,12 @@ endif;?>
 					<h4 style="color: White">Welcome <strong style="color: #2ecc71">Admin</strong></h4>
 				</div>
 			</div>
-			<div id="top-panel" class="col-md-1">
+				<div id="top-panel" class="col-md-1">
 				<div class="pull-right" style="padding-top: 5px">
-					<button style="background-color: #d64541" type="button" class="btn btn-primary">Log Out</button>
+					<button style="background-color: #d64541" type="button" class="btn btn-primary" name="logout" onclick="clickLogout()">Log Out</button>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </header>
@@ -74,19 +75,19 @@ endif;?>
 					</a>
 				</li>
 				<li>
-					<a href="ajax/my_profile.html" class="ajax-link">
+					<a href="ajax/my_profile.php" class="ajax-link">
 						<i class="fa fa-user"></i>
 						<span class="hidden-xs">My Account</span>
 					</a>
 				</li>
 				<li>
-					<a href="ajax/dashboard.html" class="ajax-link">
+					<a href="ajax/admin/user_profile.php" class="ajax-link">
 						<i class="fa fa-users"></i>
 						<span class="hidden-xs">Users Details</span>
 					</a>
 				</li>
 				<li>
-					<a href="ajax/dashboard.html" class="ajax-link">
+					<a href="ajax/admin/select_semester.php" class="ajax-link">
 						<i class="fa fa-check"></i>
 						<span class="hidden-xs">Select Semester</span>
 					</a>
@@ -130,5 +131,23 @@ endif;?>
 	</div>
 </div>
 <script src="js/routine.js"></script>
+<script type="text/javascript">
+
+
+
+  	function clickLogout(){
+
+		$.ajax({
+
+			url:"backend/logout.php",
+			type:"POST",
+
+			success:function(data,status){
+				document.location='http://localhost/Routine-Management/index.php';
+			}
+		})
+ 
+  	}
+  </script>
 </body>
 </html>

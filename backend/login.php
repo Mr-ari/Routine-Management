@@ -16,7 +16,7 @@
 
 	$counter=mysqli_num_rows($fire);
 
-	if($counter==0 or row['is_active']=='0'){
+	if($counter==0 or $row['is_active']=='0'){
 		echo "<script type='text/javascript'>alert('Invalid Username or Password!');
 		  document.location='../index.php'</script>";
 	}

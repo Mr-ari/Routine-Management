@@ -41,7 +41,7 @@ endif;?>
 			</div>
 			<div id="top-panel" class="col-md-1">
 				<div class="pull-right" style="padding-top: 5px">
-					<button style="background-color: #d64541" type="button" class="btn btn-primary">Log Out</button>
+					<button style="background-color: #d64541" type="button" class="btn btn-primary" onclick="clickLogout()">Log Out</button>
 				</div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@ endif;?>
 					</a>
 				</li>
 				<li>
-					<a href="ajax/my_profile.html" class="ajax-link">
+					<a href="ajax/my_profile.php" class="ajax-link">
 						<i class="fa fa-user"></i>
 						<span class="hidden-xs">My Account</span>
 					</a>
@@ -89,5 +89,23 @@ endif;?>
 	</div>
 </div>
 <script src="js/routine.js"></script>
+<script type="text/javascript">
+
+
+
+  	function clickLogout(){
+
+		$.ajax({
+
+			url:"backend/logout.php",
+			type:"POST",
+
+			success:function(data,status){
+				document.location='http://localhost/Routine-Management/index.php';
+			}
+		})
+ 
+  	}
+  </script>
 </body>
 </html>

@@ -1,3 +1,9 @@
+<?php session_start();
+if(empty($_SESSION['user_id'])){
+header('Location:index.php');
+}
+?>
+
 <!--Start Breadcrumb-->
 <div class="row">
   <div id="breadcrumb" class="col-xs-12">
@@ -28,44 +34,44 @@
           </div>
           <div class="panel-body">
             
-              <form method="post" action="profile_update.php">
+              <form method="post" action="backend/password_change.php">
   
                   <div class="form-group">
                     <label for="date">Full Name</label>
                     <div class="input-group col-md-12">
-                      <input type="text" class="form-control pull-right" value="Admin" name="name" placeholder="Full Name" required readonly>
+                      <input type="text" class="form-control pull-right" value="<?php echo $_SESSION['short_name']?>" name="name" placeholder="Full Name" required readonly>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
           <div class="form-group">
                     <label for="date">Username</label>
                     <div class="input-group col-md-12">
-                      <input type="text" class="form-control pull-right" value="Admin" name="username" placeholder="Username" required>
+                      <input type="text" class="form-control pull-right" value="<?php echo $_SESSION['user_name']?>" name="username" placeholder="Username" required readonly>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
           <div class="form-group">
                     <label for="date">Change Password</label>
                     <div class="input-group col-md-12">
-                      <input type="password" class="form-control pull-right" id="date" name="password" placeholder="Type new password">
+                      <input type="password" class="form-control pull-right" name="passwordnew" placeholder="Type new password">
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
         
           <div class="form-group">
                     <label for="date">Confirm New Password</label>
                     <div class="input-group col-md-12">
-                      <input type="password" class="form-control pull-right" id="date" name="new" placeholder="Type new password">
+                      <input type="password" class="form-control pull-right" name="passwordconfirm" placeholder="Type new password">
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
           <hr>
           <div class="form-group">
                     <label for="date">Enter Old Password to confirm changes</label>
                     <div class="input-group col-md-12">
-                      <input type="password" class="form-control pull-right" id="date" name="passwordold" placeholder="Type old password" required>
+                      <input type="password" class="form-control pull-right" name="passwordold" placeholder="Type old password" required>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
           
                   <div class="form-group">
                     <div class="input-group">
-                      <button class="btn btn-primary" style="background-color: #26c281" id="daterange-btn" name="">
+                      <button class="btn btn-primary" style="background-color: #26c281" name="save">
                         Save
                       </button>
                     </div>
