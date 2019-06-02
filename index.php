@@ -88,7 +88,7 @@
 
 						 	if($odd == '1'){
 						 		?>
-						 		<li><a class="ajax-link" href="ajax/it/show_routine1.html">1st Semester</a></li>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine1.php">1st Semester</a></li>
 						 		<?php
 						 	} 
 						?>
@@ -96,7 +96,7 @@
 
 						 	if($even == '1'){
 						 		?>
-						 		<li><a class="ajax-link" href="ajax/it/show_routine2.html">2nd Semester</a></li>
+						 		<li><a class="ajax-link" href="">2nd Semester</a></li>
 						 		<?php
 						 	} 
 						?>
@@ -105,7 +105,7 @@
 
 						 	if($odd == '1'){
 						 		?>
-						 		<li><a class="ajax-link" href="ajax/show_routine3.html">3st Semester</a></li>
+						 		<li><a class="ajax-link" href="">3st Semester</a></li>
 
 						 		<?php	
 						 	} 

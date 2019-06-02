@@ -15,6 +15,7 @@ endif;?>
 		 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
  		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<link href="css/style_v2.css" rel="stylesheet">
 		
@@ -98,7 +99,7 @@ endif;?>
 						<span class="hidden-xs">Subjects</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">IT</a></li>
+						<li><a class="ajax-link" href="ajax/it/subjects.php">IT</a></li>
 						<li><a class="ajax-link" href="ajax/it/show_routine2.html">CSE</a></li>
 						<li><a class="ajax-link" href="ajax/show_routine3.html">ECE</a></li>
 						<li><a class="ajax-link" href="ajax/show_routine4.html">CE</a></li>
