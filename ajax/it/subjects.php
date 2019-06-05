@@ -1,6 +1,13 @@
 <!--Start Breadcrumb-->
 <?php require '../../backend/connection.php' ?>
 
+<?php 
+  
+  $query = "SELECT user_id,short_name FROM users where role='teacher'";
+  $fire = mysqli_query($con,$query);
+
+ ?>
+
 <div class="row">
   <div id="breadcrumb" class="col-xs-12">
     <a href="#" class="show-sidebar">
@@ -49,9 +56,28 @@
                     <div class="input-group col-md-12">
                       <select class="browser-default custom-select custom-select-lg mb-3">
                           <option selected>-- Select Faculty --</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <?php while($row = mysqli_fetch_array($fire)){ ?>
+                          <option value="<?php echo $row['user_id']; ?>"><?php echo $row['short_name'];?></option>
+
+                        <?php } ?>
+                        </select>
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+
+
+                  <div class="form-group">
+                    <label for="date">Select Semester</label>
+                    <div class="input-group col-md-12">
+                      <select class="browser-default custom-select custom-select-lg mb-3">
+                          <option selected>-- None --</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
                         </select>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
@@ -59,8 +85,8 @@
           <hr>
                   <div class="form-group">
                     <div class="input-group">
-                      <button class="btn btn-primary" style="background-color: #26c281" id="save" onclick="addUser()">
-                        Add User
+                      <button class="btn btn-primary"  style="background-color: #26c281;padding-right: 15px;padding-left: 15px;" id="save" onclick="addSubject()">
+                        Save
                       </button>
                     </div>
                   </div><!-- /.form group -->
@@ -87,5 +113,4 @@
         </div>
       </div>
     </div>
-
 </div>

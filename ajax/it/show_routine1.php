@@ -17,6 +17,10 @@
 <?php require '../../backend/connection.php' ?>
 
 <div>
+
+	<div class="container">
+    <div class="row">
+      <div class="col-sm-11">
 	
 	<table class="table table-bordered">
 			
@@ -86,7 +90,7 @@
 
 
 						 <?php if ($i == 1) { ?>
-						 	<td rowspan="5" style="text-align: center;padding-top: 125px;"><?php echo "Recess" ?></td>
+						 	<td rowspan="5" style="text-align: center;padding-top: 135px;"><?php echo "Recess" ?></td>
 						 <?php } ?>
 
 
@@ -128,4 +132,48 @@
 
 			</tbody>
 		</table>
+
+	</div>
+</div>
+</div>
+
+<!--End of routine start of sunject name table-->
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+
+
+<table class="table table-striped">
+	
+
+	<thead>
+		<tr>
+			<th>Paper Code</th>
+			<th>Paper Name</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		
+		<?php 
+
+			$query2 = "SELECT paper_code,paper_name FROM it_papers where semester=1 order by paper_code";
+			$fire2 = mysqli_query($con,$query2);
+			while($row = mysqli_fetch_array($fire2)){ ?>
+				<tr>
+					<td> <?php echo $row['paper_code']; ?> </td>
+					<td> <?php echo $row['paper_name']; ?> </td>
+				</tr>
+			<?php } ?>
+	</tbody>
+</table>
+
+
+
+      </div>
+  </div>
+</div>
+
+
 </div>
