@@ -114,7 +114,7 @@ endif;?>
 						<span class="hidden-xs">Edit Routines</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/it/show_routine1.html">IT</a></li>
+						<li><a class="ajax-link" href="ajax/it/edit_routine.php">IT</a></li>
 						<li><a class="ajax-link" href="ajax/it/show_routine2.html">CSE</a></li>
 						<li><a class="ajax-link" href="ajax/show_routine3.html">ECE</a></li>
 						<li><a class="ajax-link" href="ajax/show_routine4.html">CE</a></li>

@@ -46,7 +46,7 @@
                   <div class="form-group">
                     <label for="date">Enter Subject Code</label>
                     <div class="input-group col-md-12">
-                      <input type="text" class="form-control pull-right" id="name" placeholder="Subject Code" required>
+                      <input type="text" class="form-control pull-right" id="subject_code" placeholder="Subject Code" required>
                     </div><!-- /.input group -->
                   </div><!-- /.form group -->
 
@@ -54,7 +54,7 @@
                   <div class="form-group">
                     <label for="date">Select Faculty</label>
                     <div class="input-group col-md-12">
-                      <select class="browser-default custom-select custom-select-lg mb-3">
+                      <select class="browser-default custom-select custom-select-lg mb-3" id="faculty">
                           <option selected>-- Select Faculty --</option>
                           <?php while($row = mysqli_fetch_array($fire)){ ?>
                           <option value="<?php echo $row['user_id']; ?>"><?php echo $row['short_name'];?></option>
@@ -68,7 +68,7 @@
                   <div class="form-group">
                     <label for="date">Select Semester</label>
                     <div class="input-group col-md-12">
-                      <select class="browser-default custom-select custom-select-lg mb-3">
+                      <select class="browser-default custom-select custom-select-lg mb-3" id="sem">
                           <option selected>-- None --</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -114,3 +114,32 @@
       </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+
+  function addSubject(){
+
+    var name = $('#name').val();
+    var sub_code = $('#subject_code').val();
+    var sem = $('#sem').val();
+    var faculty = $('#faculty').val();
+
+       $.ajax({
+          url:"backend/add_subject.php",
+          type:"POST",
+          data:{
+            subname:name,
+            subc:sub_code,
+            semester:sem,
+            fac:faculty
+          },
+          success:function(data,status){
+            $('#insert_form')[0].reset();
+            alert('Subjet added');
+          } 
+
+
+       })
+  }
+</script>

@@ -105,7 +105,7 @@
 
 						 	if($odd == '1'){
 						 		?>
-						 		<li><a class="ajax-link" href="">3st Semester</a></li>
+						 		<li><a class="ajax-link" href="ajax/it/show_routine3.php">3st Semester</a></li>
 
 						 		<?php	
 						 	} 

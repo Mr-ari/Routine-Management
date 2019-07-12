@@ -67,13 +67,7 @@ endif;?>
 					</a>
 				</li>
 				<li>
-					<a href="ajax/dashboard.html" class="ajax-link">
-						<i class="fa fa-calendar-o"></i>
-						<span class="hidden-xs">Today's classes</span>
-					</a>
-				</li>
-				<li>
-					<a href="ajax/dashboard.html" class="ajax-link">
+					<a href="ajax/teacher/show_classes.php" class="ajax-link">
 						<i class="fa fa-calendar"></i>
 						<span class="hidden-xs">This weeks classes</span>
 					</a>
